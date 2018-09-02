@@ -1,7 +1,9 @@
-package com.ighub.agrocity;
+package com.ighub.agrocity.Activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.ighub.agrocity.R;
 
 public class MainActivity extends AppCompatActivity {
 
