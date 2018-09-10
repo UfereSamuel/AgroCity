@@ -227,7 +227,7 @@ public class Registeration extends AppCompatActivity implements View.OnClickList
             hud.dismiss();
 
             try {
-                if (json != null && json.getString("status").equals("200")) {
+                if (json != null && json.getString("status").equals("200") && json.get("message").equals("successfully created an account")) {
 
                     preference = getApplicationContext().getSharedPreferences(PREFS_NAME, Activity.MODE_PRIVATE);
                     editor = preference.edit();
@@ -242,10 +242,10 @@ public class Registeration extends AppCompatActivity implements View.OnClickList
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
                     finish();
-                } else if(json != null && json.getString("status").equals("400")){
+                } else if(json != null && json.getString("status").equals("500")){
                     new SweetAlertDialog(Registeration.this, SweetAlertDialog.WARNING_TYPE)
                             .setTitleText("Error Message")
-                            .setContentText("User already registered")
+                            .setContentText("Email already exists")
                             .setConfirmText("OK")
                             .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
                                 @Override
