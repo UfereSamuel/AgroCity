@@ -148,7 +148,7 @@ public class Registeration extends AppCompatActivity implements View.OnClickList
         }
         if (util.isNetworkAvailable(getApplicationContext())) {
             try {
-                new sendPostRequest();
+                new sendPostRequest().execute();
             } catch (Exception e) {
                 e.printStackTrace();
             }
