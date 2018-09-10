@@ -235,7 +235,7 @@ public class Registeration extends AppCompatActivity implements View.OnClickList
                     editor.apply();
 
                     MDToast.makeText(getApplicationContext(), "Account successfully " +
-                                    "created, please login!",
+                                    "created, Please check your email to activate your account and then login",
                             MDToast.LENGTH_SHORT, MDToast.TYPE_SUCCESS).show();
 
                     Intent intent = new Intent(Registeration.this, Login.class);
